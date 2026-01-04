@@ -1,0 +1,40 @@
+Loading gold5min.csv...
+Running Backtest...
+
+--- Backtest Results ---
+Start                     2025-09-07 22:00...
+End                       2025-12-17 17:45...
+Duration                    100 days 19:45:00
+Exposure Time [%]                       1.951
+Equity Final [$]                    9752.8742
+Equity Peak [$]                   10032.29081
+Commissions [$]                     119.33078
+Return [%]                           -2.47126
+Buy & Hold Return [%]                19.36543
+Return (Ann.) [%]                    -6.91498
+Volatility (Ann.) [%]                  2.6403
+CAGR [%]                             -6.06277
+Sharpe Ratio                         -2.61902
+Sortino Ratio                        -2.79136
+Calmar Ratio                         -2.39367
+Alpha [%]                            -2.92823
+Beta                                   0.0236
+Max. Drawdown [%]                    -2.88886
+Avg. Drawdown [%]                    -0.58015
+Max. Drawdown Duration       61 days 05:35:00
+Avg. Drawdown Duration       14 days 06:07:00
+# Trades                                   75
+Win Rate [%]                         45.33333
+Best Trade [%]                        0.62305
+Worst Trade [%]                      -0.42617
+Avg. Trade [%]                       -0.04044
+Max. Trade Duration           0 days 01:55:00
+Avg. Trade Duration           0 days 00:22:00
+Profit Factor                         0.65645
+Expectancy [%]                       -0.04021
+SQN                                  -1.60735
+Kelly Criterion                      -0.24337
+_strategy                    JohnKuriskoScalp
+_equity_curve                             ...
+_trades                       Size  ...  E...
+dtype: object

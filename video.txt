@@ -1,0 +1,71 @@
+The video provides an in-depth explanation of John Kurisko's scalping methodology, focusing on technical indicators and precise execution. His approach is built upon market discipline, specific stochastic settings, channel identification, and the critical concept of divergences and quad rotations.
+
+I. Trading Philosophy and Discipline:
+
+Business Plan Mindset: Kurisko emphasizes treating trading as a formal business (0:04:04). This involves having an organized plan, defining what to look for, and understanding that trading is not about "trading around your life" but rather designing your life around trading (0:05:51-0:05:53). He notes this is a "hard thing" that will eliminate over 50% of traders (0:05:55-0:05:59).
+Overtrading: He acknowledges that most traders, including himself, overtrade due to emotional reasons (0:06:01-0:06:06). He highlights that "the more you're in the markets, the more that market's going to probably get you" (0:03:42-0:03:47), leading to the realization that "the less I trade, the better I would do" (0:03:49-0:03:51).
+Patience and Dedication: Success requires "practice and dedication and discipline and patience" (0:07:51-0:07:56). It's not about hitting a "home run" every day (0:07:48).
+Profit Taking: A crucial aspect of discipline is taking profits when they are available, even if the trade could potentially go further (0:21:57-0:22:07). He explicitly states, "if you want to be successful and live the life that you're living like traveling around and stuff, you have to you have to be serious enough to take your profits when you have you're going to have profits on all these trades" (0:21:51-0:22:02).
+II. Timeframes and Trade Characteristics:
+
+Primary Timeframe: The strategy primarily utilizes 1-to-5 minute timeframes (0:06:31-0:06:35). A trade is typically held for approximately 1 to 5 minutes (0:06:37-0:06:41).
+Trade Duration Extensibility: The 60-10 stochastic helps decide if a trade can be held longer (0:06:46-0:06:52).
+Setup Frequency: On average, traders can expect five to seven setups per day based on divergence signals (0:06:54-0:06:59).
+Market Applicability: The strategy works on "everything" including Forex, Gold, Bitcoin, and ES futures (0:24:19-0:24:36).
+Overnight Setups: Overnight setups are often "cleaner" because they lack the high volatility and news impact of the regular US market hours (0:01:01:28-0:01:01:43).
+III. Core Technical Components:
+
+A. Channel Identification (1-2-3 Pattern):
+
+Definition: A channel is identified using a "1-2-3 pattern" (0:08:31-0:08:37). This involves:
+Two points: To define one side of a straight line, representing one side of the channel (0:08:52-0:09:00).
+Third pivot: A third pivot point, typically underneath the two points on one side, to define the second side of the channel (0:09:02-0:09:22).
+Cloning: Once three pivots are identified, the initial line is cloned and dropped to the third pivot to project the channel (0:09:16-0:09:22). This allows knowing where the channel will form "before the channel even formed" (0:09:23-0:09:26).
+Algorithm Recognition: Trend lines are important because "algorithms pick up on this" (0:10:08-0:10:11).
+Re-settlement: After aggressive moves due to news or opens/closes, the market typically "resettles in" (0:10:01-0:10:06).
+New Channel from Pivot: The low point of a pivot (a change of direction) usually becomes the "first pivot of a one, two, three channel" (0:29:55-0:30:02).
+B. Stochastic Oscillators and Parameters:
+
+Inventor: George Lane, invented in the 1950s (0:10:44-0:10:47).
+Purpose: Measures momentum or the "energy of a rocket" (0:12:00-0:12:17). It indicates when the "engine is cut off" (momentum drops) even if the price is still moving in the same direction (0:12:40-0:12:48). It was not originally meant for overbought/oversold indications by Lane (0:12:07-0:12:09).
+Plotting: Stochastics are plotted on a graph between 0 and 100 (0:11:38-0:11:40).
+Key Parameters: Kurisko uses four specific stochastic sets (0:10:38-0:10:39):
+9-3 Stochastic: The fastest and most common (0:10:36, 0:13:04-0:13:07). This is key for entry timing and is the "cash-out signal" (0:23:44).
+14-3 Stochastic: Another common default parameter, kept for historical reasons (0:13:04-0:13:07, 0:16:20-0:16:22).
+44 Stochastic: Bridges the gap between the 14-3 and 60-10 (0:16:26-0:16:28). A 44 divergence is a "magic thing" and "never fail" (0:16:34-0:16:45).
+60-10 Stochastic: The slowest, and crucial for determining trade duration (0:06:48-0:06:52, 0:16:15). It's also linked to the 5-minute timeframe, as 60 candles on a 1-minute chart roughly correlate to a 5-minute movement (0:15:05-0:15:09).
+Parameter Settings: For "full stochastics" which have three parameters, the K smoothing should always be '1' (e.g., 9-3-1, 14-3-1, 44-1, 60-10-1) (0:13:51-0:14:11).
+Monitoring Levels: The 20 line (oversold) and 80 line (overbought) are significant thresholds for decision-making (0:16:07-0:16:08, 0:21:26).
+C. Quad Rotation:
+
+Definition: A "quad rotation" occurs when all four stochastics (9-3, 14-3, 44, 60-10) align (0:08:05, 0:15:55-0:15:57). For a long trade setup, this means all four are oversold (below the 20 line) (0:17:01-0:17:06).
+"Trading Environment": When all four stochastics are oversold, the market is in the "trading environment" for a potential reversal (0:17:06-0:17:15).
+Rotation Time: A full stochastic rotation typically takes five to seven candles (0:17:21-0:17:23).
+D. Divergences:
+
+Core Concept: Divergences tell when price momentum is topping out (0:12:48-0:12:50).
+Bullish Divergence Example: Price makes a lower low (e.g., 81.3 to 80.5), but the stochastic (e.g., 9-3) makes a higher low (e.g., 5 to 10) (0:17:59-0:18:43). This signals a shift in momentum (0:18:41-0:18:43).
+Measurement: When doing divergences, traders should focus on the "body lows" of the candles, not necessarily the wicks or tails (0:28:35-0:28:45). A "pure divergence" exists if bodies are equal or the right body is slightly lower on a higher stochastic low (0:28:45-0:28:51).
+"Super Signal": The ultimate entry signal is the combination of a quad rotation AND a divergence (0:18:17-0:18:24, 0:25:01-0:25:10, 0:26:34-0:26:37). This is considered a "very, very powerful" signal (0:25:16).
+Mandatory Trades: "All divergences must be taken" (0:35:48-0:35:50).
+IV. Trade Execution:
+
+Entry: Buy on the turn back up after identifying the divergence (0:18:49).
+Stop Loss: Place the stop underneath the lows of the entry candles (0:18:51-0:18:53, 0:29:53-0:29:55).
+Win Rate: Kurisko estimates an 80% success rate (8 out of 10 setups) for these divergence setups (0:19:32-0:19:34). However, he cautions that this doesn't guarantee profit if exits aren't managed (0:19:36-0:19:38). If entries were "perfect," the win rate would be "probably close to 85-90%" (0:23:36-0:23:41). He doesn't "believe in backtesting" because the technique requires understanding the "pulse of the market" (0:19:56-0:20:00).
+Exit Strategy (9-3 at 80): For a long trade, the primary exit signal is when the 9-3 stochastic rotates up to the 80 line (0:21:22-0:21:29). He advises taking the trade off without hesitation, as "nine out of... seven out of ten times it's going to retrace back" (0:21:31-0:21:40). This prevents "FOMO" (fear of missing out) (0:21:45-0:21:47).
+"Embedded Rule" (60-10): The 60-10 stochastic is used for bear and bull flags (0:30:32). If the 60-10 is "embedded" (staying in the overbought/oversold region while price continues), it suggests a strong trend and signals to stay in the trade longer, avoiding false exits (0:30:32-0:30:57).
+V. Advanced Concepts:
+
+Channel Width Identification via Divergence (World Premiere): This is a new technique introduced in the video (0:32:19-0:32:33).
+Bullish Divergence: If there's a low and a lower low in price with a bullish divergence in stochastics, the high point of the bounce between those two lows defines the width of the new channel (0:32:32-0:32:41, 0:31:21-0:31:40).
+Bearish Divergence: If there's a high and a higher high in price with a bearish divergence, the low point of the pullback between those two highs defines the width of the new channel (0:30:52-0:31:40).
+Angles: These newly formed channels often have angles between 25 to 35 degrees (0:33:23-0:33:28).
+Trend Continuation Setup: This is an alternative when no divergence is present (0:41:28).
+Pivots: Pivots are defined as "changes of direction" in the market (0:29:51-0:29:52). The job of the trader is to identify these pivots using the quad rotation divergence (0:29:06-0:29:14).
+Visual Confirmation: The setups are described as "visual confirmation" and "scientific," making them unmistakable (0:20:05-0:20:11).
+VI. Practical Advice and Tools:
+
+Templates: John Kurisko provides TradingView templates for his indicators (0:24:47-0:24:52).
+News Impact: Be aware of economic news, as it can cause aggressive, unpredictable moves (0:09:52-0:09:57). Trades during such periods (e.g., 8:30 AM economic news) are considered a "gamble" and should not be counted as viable trades (0:35:22-0:35:28).
+Market Imperfections: The market is "imperfect" (0:00:00). Traders build understanding over time to "feel the pulse of the market" (0:00:04-0:00:06).

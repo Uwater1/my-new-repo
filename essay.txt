@@ -1,0 +1,103 @@
+This document provides a detailed overview of the trading methodology and business outline of John Kurisko, known as "DayTraderRockStar," the founder of DayTradingRadio.com. The primary focus is on a high-probability technical analysis approach centered on "Divergence" and "Stochastic" indicators.
+
+### **Core Trading Strategies**
+
+Kurisko identifies four primary money-making trades, listed by consistency:
+
+1. 
+**Divergence (Long and Short):** Applied on 1-minute, 3-minute, 5-minute, 60-minute, and Daily time frames.
+
+
+2. 
+**Triple Stochastic Flag (Long and Short):** Applied on 1-minute, 5-minute, and Daily time frames.
+
+
+3. 
+**200 EMA Breakdown / Channel Line Bounce:** Trading price reactions to major moving averages and channel boundaries.
+
+
+4. 
+**Oversold Stochastic Channel Line Bounce:** Identifying entries when price hits a channel line and stochastics are oversold.
+
+
+
+### **The Concept of Divergence**
+
+Divergence occurs when the price of an asset and a technical indicator (typically an oscillator) move in opposite directions.
+
+* 
+**Momentum Focus:** Using George Lane’s Stochastic Oscillator, the strategy tracks price momentum, which typically changes direction before the price itself.
+
+
+* **Bullish (Buy Side) Divergence:**
+* 
+**Stage 1:** Price makes a lower low while the stochastic is under 20. Then, the stochastic bounces back above 20.
+
+
+* 
+**Stage 2:** Price makes a new lower low (or double bottom), but the stochastic holds above 20 and turns up, creating a higher low.
+
+
+
+
+* **Bearish (Sell Side) Divergence:**
+* 
+**Stage 1:** Price makes a higher high while the stochastic is over 80. Then, the stochastic pulls back below 80.
+
+
+* 
+**Stage 2:** Price makes a new higher high (or double top), but the stochastic holds under 80 and turns down, creating a lower high.
+
+
+
+
+
+### **Technical Setup and HPS Methodology**
+
+The "High Probability Setup" (HPS) Methodology relies on a combination of indicators to identify "HPS Zones":
+
+* 
+**Moving Averages:** 20, 50, and 200 Exponential Moving Averages (EMA).
+
+
+* 
+**Stochastic Settings:** Fast Stochastics (14,3 and 40,4) and Full Stochastic (60,10,10).
+
+
+* 
+**Chart Patterns:** Wedges, channels, 1-2-3 patterns, flags, and pennants.
+
+
+* 
+**Reversal Candlesticks:** Hammers, Piercing Patterns, Engulfing Patterns, Shooting Stars, and Tweezers.
+
+
+* 
+**Trade Confirmation:** Ideally, divergence signals should line up with channel lines (trend lines) and be capped with reversal candles.
+
+
+
+### **Risk Management and Capital Allocation**
+
+* 
+**The 2% Rule:** Traders should never risk more than 2% to 2.5% of their total account value on a single position.
+
+
+* 
+**Scaling In:** Initial entry is typically taken when price has moved into the divergence pattern (65%-75% complete), with more added upon a stochastic crossover.
+
+
+* **Trading Vehicles (S&P 500 Example):**
+* **E-mini Futures ($es_f):** Highly leveraged; 2 contracts can be traded with roughly $2,800 to $5,000 depending on the broker.
+
+
+* **SPY Shares:** Lower leverage; $5,000 buys approximately 22 shares.
+
+
+* **SPY Options:** High leverage; $700 can purchase 20 weekly contracts.
+
+
+
+
+* 
+**Path to Live Trading:** Kurisko recommends trading on a demo account until the account value doubles, then funding a live account and repeating the process.
