@@ -1,0 +1,150 @@
+// @version=6
+indicator("Multi-Oscillator Adaptive Kernel | Opus", overlay = false, max_labels_count = 500)
+// Input Groups
+GRP1 = "Display Options"
+GRP2 = "Oscillator Selection"
+GRP3 = "Kernel Settings"
+// Indicator Sources
+src = input.source(close, "Source", group = GRP2)
+// Oscillator Toggles
+use_RSI = input.bool(true, "RSI", inline = "RSI", group = GRP2)
+use_STOCH = input.bool(true, "Stochastic", inline = "STOCH", group = GRP2)
+use_MFI = input.bool(true, "MFI", inline = "MFI", group = GRP2)
+use_CCI = input.bool(false, "CCI", inline = "CCI", group = GRP2)
+// Oscillator Lengths
+len_RSI = input.int(14, "Length", inline = "RSI", group = GRP2)
+len_STOCH = input.int(14, "Length", inline = "STOCH", group = GRP2)
+len_MFI = input.int(14, "Length", inline = "MFI", group = GRP2)
+len_CCI = input.int(20, "Length", inline = "CCI", group = GRP2)
+// Kernel Settings
+kernel_type = input.string("Exponential", "Kernel Type", options = ["Exponential", "Linear", "Gaussian"], group = GRP3)
+kernel_len = input.int(25, "Kernel Length", group = GRP3)
+sensitivity = input.float(1.5, "Sensitivity", minval = 0.1, maxval = 5.0, step = 0.1, group = GRP3)
+// Display Settings
+bar_coloring = input.bool(true, "Color Bars", group = GRP1)
+
+// Updated colors to match Opus series
+bull_color = #00F1FF  // Cyan
+bear_color = #FF019A  // Magenta
+
+// Normalized Oscillators
+rsi_norm(src, len) =>
+    r = ta.rsi(src, len) 
+    (r - 50) * 2
+stoch_norm(src, high, low, len) =>
+    k = ta.sma(ta.stoch(src, high, low, len), 3)
+    (k - 50) * 2
+mfi_norm(src, len) =>
+    m = ta.mfi(src, len)
+    (m - 50) * 2
+cci_norm(src, high, low, len) =>
+    c = ta.cci(src, len)
+    c / 4
+// Calculate active oscillators
+var active_count = 0
+active_count := 0
+var rsi_val = 0.0
+var stoch_val = 0.0
+var mfi_val = 0.0
+var cci_val = 0.0
+if use_RSI
+    rsi_val := rsi_norm(src, len_RSI)
+    active_count := active_count + 1
+if use_STOCH
+    stoch_val := stoch_norm(src, high, low, len_STOCH)
+    active_count := active_count + 1
+if use_MFI
+    mfi_val := mfi_norm(src, len_MFI)
+    active_count := active_count + 1
+    
+if use_CCI
+    cci_val := cci_norm(src, high, low, len_CCI)
+    active_count := active_count + 1
+// Combine indicators
+raw_value = (rsi_val + stoch_val + mfi_val + cci_val) / math.max(active_count, 1)
+// Kernel weighting function
+kernel_weight(i, len, type) =>
+    float result = 0.0
+    if type == "Exponential"
+        result := math.exp(-5.0 * i / len)
+    else if type == "Linear"
+        result := 1.0 - (i / len)
+    else if type == "Gaussian"
+        result := math.exp(-0.5 * math.pow(3.0 * i / len, 2))
+    result
+// Apply kernel smoothing
+smooth_value(src, len, type) =>
+    float sum = 0.0
+    float weight_sum = 0.0
+    
+    for i = 0 to math.min(len - 1, bar_index)
+        w = kernel_weight(i, len, type)
+        sum := sum + src[i] * w
+        weight_sum := weight_sum + w
+    
+    sum / weight_sum
+// Calculate smoothed values
+signal = smooth_value(raw_value, kernel_len, kernel_type)
+signal2 = smooth_value(signal, kernel_len * 2, kernel_type)
+// Define trend conditions
+trend_up = signal2 > 0
+trend_down = signal2 < 0
+
+// Draw zero line 
+var zeroLine = plot(0, "Zero Line", color.new(color.gray, 50), 1)
+
+// Plot main signal line with reduced opacity
+var signalPlot = plot(signal, "Signal Line", color.new(signal > 0 ? bull_color : bear_color, 70), 1)
+
+// REDUCED NUMBER OF LAYERS FOR GRADIENT - Using 10 layers instead of 20 for each side
+
+// Define positive layers with decreasing opacity as we approach zero
+var pos_layer1 = plot(signal2 > 0 ? signal2 : 0, "P1", bull_color, 2)
+var pos_layer2 = plot(signal2 > 0 ? signal2 * 0.9 : 0, "P2", color.new(bull_color, 10), 1)
+var pos_layer3 = plot(signal2 > 0 ? signal2 * 0.8 : 0, "P3", color.new(bull_color, 20), 1)
+var pos_layer4 = plot(signal2 > 0 ? signal2 * 0.7 : 0, "P4", color.new(bull_color, 30), 1)
+var pos_layer5 = plot(signal2 > 0 ? signal2 * 0.6 : 0, "P5", color.new(bull_color, 40), 1)
+var pos_layer6 = plot(signal2 > 0 ? signal2 * 0.5 : 0, "P6", color.new(bull_color, 50), 1)
+var pos_layer7 = plot(signal2 > 0 ? signal2 * 0.4 : 0, "P7", color.new(bull_color, 60), 1)
+var pos_layer8 = plot(signal2 > 0 ? signal2 * 0.3 : 0, "P8", color.new(bull_color, 70), 1)
+var pos_layer9 = plot(signal2 > 0 ? signal2 * 0.2 : 0, "P9", color.new(bull_color, 80), 1)
+var pos_layer10 = plot(signal2 > 0 ? signal2 * 0.1 : 0, "P10", color.new(bull_color, 90), 1)
+
+// Define negative layers with decreasing opacity as we approach zero
+var neg_layer1 = plot(signal2 < 0 ? signal2 : 0, "N1", bear_color, 2)
+var neg_layer2 = plot(signal2 < 0 ? signal2 * 0.9 : 0, "N2", color.new(bear_color, 10), 1)
+var neg_layer3 = plot(signal2 < 0 ? signal2 * 0.8 : 0, "N3", color.new(bear_color, 20), 1)
+var neg_layer4 = plot(signal2 < 0 ? signal2 * 0.7 : 0, "N4", color.new(bear_color, 30), 1)
+var neg_layer5 = plot(signal2 < 0 ? signal2 * 0.6 : 0, "N5", color.new(bear_color, 40), 1)
+var neg_layer6 = plot(signal2 < 0 ? signal2 * 0.5 : 0, "N6", color.new(bear_color, 50), 1)
+var neg_layer7 = plot(signal2 < 0 ? signal2 * 0.4 : 0, "N7", color.new(bear_color, 60), 1)
+var neg_layer8 = plot(signal2 < 0 ? signal2 * 0.3 : 0, "N8", color.new(bear_color, 70), 1)
+var neg_layer9 = plot(signal2 < 0 ? signal2 * 0.2 : 0, "N9", color.new(bear_color, 80), 1)
+var neg_layer10 = plot(signal2 < 0 ? signal2 * 0.1 : 0, "N10", color.new(bear_color, 90), 1)
+
+// Fill all the positive gradient layers
+fill(pos_layer1, pos_layer2, signal2 > 0 ? color.new(bull_color, 5) : na)
+fill(pos_layer2, pos_layer3, signal2 > 0 ? color.new(bull_color, 15) : na)
+fill(pos_layer3, pos_layer4, signal2 > 0 ? color.new(bull_color, 25) : na)
+fill(pos_layer4, pos_layer5, signal2 > 0 ? color.new(bull_color, 35) : na)
+fill(pos_layer5, pos_layer6, signal2 > 0 ? color.new(bull_color, 45) : na)
+fill(pos_layer6, pos_layer7, signal2 > 0 ? color.new(bull_color, 55) : na)
+fill(pos_layer7, pos_layer8, signal2 > 0 ? color.new(bull_color, 65) : na)
+fill(pos_layer8, pos_layer9, signal2 > 0 ? color.new(bull_color, 75) : na)
+fill(pos_layer9, pos_layer10, signal2 > 0 ? color.new(bull_color, 85) : na)
+fill(pos_layer10, zeroLine, signal2 > 0 ? color.new(bull_color, 95) : na)
+
+// Fill all the negative gradient layers
+fill(neg_layer1, neg_layer2, signal2 < 0 ? color.new(bear_color, 5) : na)
+fill(neg_layer2, neg_layer3, signal2 < 0 ? color.new(bear_color, 15) : na)
+fill(neg_layer3, neg_layer4, signal2 < 0 ? color.new(bear_color, 25) : na)
+fill(neg_layer4, neg_layer5, signal2 < 0 ? color.new(bear_color, 35) : na)
+fill(neg_layer5, neg_layer6, signal2 < 0 ? color.new(bear_color, 45) : na)
+fill(neg_layer6, neg_layer7, signal2 < 0 ? color.new(bear_color, 55) : na)
+fill(neg_layer7, neg_layer8, signal2 < 0 ? color.new(bear_color, 65) : na)
+fill(neg_layer8, neg_layer9, signal2 < 0 ? color.new(bear_color, 75) : na)
+fill(neg_layer9, neg_layer10, signal2 < 0 ? color.new(bear_color, 85) : na)
+fill(neg_layer10, zeroLine, signal2 < 0 ? color.new(bear_color, 95) : na)
+
+// Bar coloring
+barcolor(bar_coloring ? (signal2 > 0 ? bull_color : bear_color) : na)

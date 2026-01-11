@@ -1,103 +1,76 @@
-This document provides a detailed overview of the trading methodology and business outline of John Kurisko, known as "DayTraderRockStar," the founder of DayTradingRadio.com. The primary focus is on a high-probability technical analysis approach centered on "Divergence" and "Stochastic" indicators.
-
-### **Core Trading Strategies**
-
-Kurisko identifies four primary money-making trades, listed by consistency:
-
-1. 
-**Divergence (Long and Short):** Applied on 1-minute, 3-minute, 5-minute, 60-minute, and Daily time frames.
-
-
-2. 
-**Triple Stochastic Flag (Long and Short):** Applied on 1-minute, 5-minute, and Daily time frames.
-
-
-3. 
-**200 EMA Breakdown / Channel Line Bounce:** Trading price reactions to major moving averages and channel boundaries.
-
-
-4. 
-**Oversold Stochastic Channel Line Bounce:** Identifying entries when price hits a channel line and stochastics are oversold.
-
-
-
-### **The Concept of Divergence**
-
-Divergence occurs when the price of an asset and a technical indicator (typically an oscillator) move in opposite directions.
-
-* 
-**Momentum Focus:** Using George Lane’s Stochastic Oscillator, the strategy tracks price momentum, which typically changes direction before the price itself.
-
-
-* **Bullish (Buy Side) Divergence:**
-* 
-**Stage 1:** Price makes a lower low while the stochastic is under 20. Then, the stochastic bounces back above 20.
-
-
-* 
-**Stage 2:** Price makes a new lower low (or double bottom), but the stochastic holds above 20 and turns up, creating a higher low.
-
-
-
-
-* **Bearish (Sell Side) Divergence:**
-* 
-**Stage 1:** Price makes a higher high while the stochastic is over 80. Then, the stochastic pulls back below 80.
-
-
-* 
-**Stage 2:** Price makes a new higher high (or double top), but the stochastic holds under 80 and turns down, creating a lower high.
-
-
-
-
-
-### **Technical Setup and HPS Methodology**
-
-The "High Probability Setup" (HPS) Methodology relies on a combination of indicators to identify "HPS Zones":
-
-* 
-**Moving Averages:** 20, 50, and 200 Exponential Moving Averages (EMA).
-
-
-* 
-**Stochastic Settings:** Fast Stochastics (14,3 and 40,4) and Full Stochastic (60,10,10).
-
-
-* 
-**Chart Patterns:** Wedges, channels, 1-2-3 patterns, flags, and pennants.
-
-
-* 
-**Reversal Candlesticks:** Hammers, Piercing Patterns, Engulfing Patterns, Shooting Stars, and Tweezers.
-
-
-* 
-**Trade Confirmation:** Ideally, divergence signals should line up with channel lines (trend lines) and be capped with reversal candles.
-
-
-
-### **Risk Management and Capital Allocation**
-
-* 
-**The 2% Rule:** Traders should never risk more than 2% to 2.5% of their total account value on a single position.
-
-
-* 
-**Scaling In:** Initial entry is typically taken when price has moved into the divergence pattern (65%-75% complete), with more added upon a stochastic crossover.
-
-
-* **Trading Vehicles (S&P 500 Example):**
-* **E-mini Futures ($es_f):** Highly leveraged; 2 contracts can be traded with roughly $2,800 to $5,000 depending on the broker.
-
-
-* **SPY Shares:** Lower leverage; $5,000 buys approximately 22 shares.
-
-
-* **SPY Options:** High leverage; $700 can purchase 20 weekly contracts.
-
-
-
-
-* 
-**Path to Live Trading:** Kurisko recommends trading on a demo account until the account value doubles, then funding a live account and repeating the process.
+Comprehensive Extraction: DayTraderRockStar
+(DTRS) Trading Methodology
+This document details the technical trading strategies of John Kurisko,
+specifically focusing on the "High Probability Setup" (HPS) zones identified in
+the slide show.
+1. Primary Trading Setups
+The methodology is built around four core "Money Making Trades":
+1. Divergence (Long and Short): Traded on 1m, 3m, 5m, 60m, and Daily
+timeframes.
+2. Triple Stochastic Flag (Long and Short): Traded on 1m, 5m, and Daily
+timeframes.
+3. 200 EMA Breakdown / Channel Line Bounce.
+4. Oversold Stochastic Channel Line Bounce.
+2. Technical Indicator Specifications
+The DTRS system relies heavily on specific Stochastic settings to identify
+momentum shifts and exhaustion.
+Stochastic Settings
+Divergence Detector: 9, 3 (Fast Stochastic)
+Fast Stochastic: 14, 3
+Medium Stochastic: 40, 4
+Slow Stochastic: 60, 10, 10 (Full Stochastic)
+Moving Averages & Trend Tools
+20 EMA: Primary trend/momentum filter.
+200 EMA: Significant institutional level for breakdowns/bounces.
+Channel Lines: Trend lines identifying the "tracks" in which price moves.
+3 Th Di M th d l
+3. The Divergence Methodology
+Divergence is considered the most consistent trade. It is broken down into
+specific "Stages" for execution.
+Buy Side Divergence (Lower Low Entry)
+Stage 1: Price makes a low; Stochastic must be under the 20 line.
+Stage 2: Price makes a lower low (or double bottom). Simultaneously,
+the Stochastic must hold above the 20 line and turn up, creating a
+"Higher Low" on the indicator.
+Confirmation: * Preferred: 5m or 60m Stochastics moving up off
+oversold levels.
+Candlestick: The lower low should ideally be capped with a reversal
+candle.
+Context: Best when aligned with a lower channel line.
+Sell Side Divergence (Higher High Entry)
+Stage 1: Price makes a high; Stochastic must be over the 80 line.
+Stage 2: Price makes a higher high (or double top). Simultaneously, the
+Stochastic must hold below the 80 line and turn down, creating a
+"Lower High" on the indicator.
+Confirmation: Preferred 5m/60m Stochastics moving down from
+overbought.
+4. Triple Stochastic Flag Setup
+This setup looks for a "coil" or "flag" behavior across multiple timeframe
+indicators.
+Criteria: When the fast (14,3), medium (40,4), and slow (60,10,10)
+stochastics align in a specific direction.
+Bull Flag: Fast stochastic pulls back to oversold while the slow stochastic
+remains pinned or trending upward.
+Bear Flag: Fast stochastic bounces to overbought while the slow
+stochastic remains pinned near the bottom.
+5. Business Rules & Risk Management
+Kurisko emphasizes a "Business Plan" approach to eliminate overthinking.
+Core Trading Rules
+2% Rule: Never risk more than 2%–3% of account value on a single
+position.
+Discipline: If a divergence fails and stops you out, but a "Running
+Divergence" forms immediately after, it must be taken.
+The 80 Rule: When in doubt, exit long positions when the stochastic
+reaches the 80 (overbought) level.
+Trend Dominance: Divergence signals are often "defeated" by strong
+Bull/Bear flags; do not fight a strong flag.
+Position Sizing Examples (Based on $5,000 Capital)
+ES Futures: ~2 Contracts (assuming discount margin).
+SPY Shares: ~22 Shares (utilizing full capital).
+SPY Options: ~20 Contracts (approx. $700 cost, keeping significant cash
+in reserve).
+6. Glossary of HPS Terms
+Quad Rotation: A specific alignment of the four stochastic indicators
+transitioning from one side of the oscillator to the other.
+X Marks the Spot: The intersection of two proven trend lines.
+Stochastic Coil: When indicators compress before a volatile breakout.
