@@ -1,0 +1,9 @@
+# Dependencies for data downloader (requires internet access)
+yfinance>=0.2.18
+
+# Dependencies for timing analyzer (can work offline with CSV files)
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Optional: for enhanced terminal output
+colorama>=0.4.6
