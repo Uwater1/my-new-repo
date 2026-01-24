@@ -44,9 +44,9 @@ class StockDataDownloader:
         """
         if interval.endswith('m'):
             minutes = int(interval[:-1])
-            if 1 <= minutes <= 4:
+            if minutes == 1:
                 return 8
-            elif 5 <= minutes <= 59:
+            elif 2 <= minutes <= 59:
                 return 60
         elif interval.endswith('h'):
             hours = int(interval[:-1])

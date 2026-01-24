@@ -10,7 +10,7 @@ from backtesting import Backtest, Strategy
 
 def load_data(filepath):
     """
-    Loads generic 5-min CSV.
+    Loads generic E-mini 5-min CSV.
     Expected columns: Time, Open, High, Low, Close, Volume
     """
     try:
@@ -19,9 +19,9 @@ def load_data(filepath):
         
         # Ensure DateTime Index
         if 'time' in df.columns:
-            # Parse as UTC, then convert to Eastern Time
+            # Assuming input is UTC or localized; convert to ET if needed for specific 9:30 checks
+            # For this example, we assume the CSV times are already in the trading timezone (ET)
             df['time'] = pd.to_datetime(df['time'], utc=True)
-            df['time'] = df['time'].dt.tz_convert('America/New_York')
             df.set_index('time', inplace=True)
             
         df.rename(columns={'open': 'Open', 'high': 'High', 'low': 'Low', 'close': 'Close', 'volume': 'Volume'}, inplace=True)
@@ -143,11 +143,6 @@ class PatternScalp(Strategy):
             # Check if we already traded today. 
             # Note: self.trades includes active trades. self.closed_trades check might be needed for full strictness.
             # For simplicity, if we are in a trade, do nothing.
-            
-            # Close trade at 3:30 PM if still open
-            if current_time >= "15:30":
-                for trade in self.trades:
-                    trade.close()
             return
 
         # 2. Manipulation Validation
