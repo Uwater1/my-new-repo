@@ -108,33 +108,16 @@ class StockDataDownloader:
                 print(f"❌ No data found for {ticker}")
                 return False
             
-            # Filter for regular trading hours (9:30 AM to 4:00 PM EST)
-            data = data.sort_index()
-            data['time'] = data.index.time
-            market_open = pd.Timestamp('09:30').time()
-            market_close = pd.Timestamp('16:00').time()
-            
-            trading_data = data[
-                (data['time'] >= market_open) & 
-                (data['time'] <= market_close)
-            ]
-            
-            if trading_data.empty:
-                print(f"❌ No trading data found for {ticker}")
-                return False
-            
-            # Remove the time column before saving
-            trading_data = trading_data.drop('time', axis=1)
-            
+                        
             # Generate filename
             filename = f"{ticker}_{interval}.csv"
             filepath = os.path.join(self.output_dir, filename)
             
             # Save to CSV
-            trading_data.to_csv(filepath)
+            data.to_csv(filepath)
             
-            print(f"✅ Successfully saved {len(trading_data)} data points to {filepath}")
-            print(f"   Date range: {trading_data.index.min()} to {trading_data.index.max()}")
+            print(f"✅ Successfully saved {len(data)} data points to {filepath}")
+            print(f"   Date range: {data.index.min()} to {data.index.max()}")
             
             return True
             
